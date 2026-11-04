@@ -1,4 +1,5 @@
 ﻿// Include the namespaces (code libraries) you need below.
+using mitchell_kevin_a3_project;
 using System;
 using System.Numerics;
 
@@ -18,7 +19,8 @@ namespace MohawkGame2D
         /// </summary>
         public void Setup()
         {
-
+            Window.SetSize(800, 600);
+            Window.SetTitle("Desert Bus Bootleg");
         }
 
         /// <summary>
@@ -26,7 +28,9 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-
+            Draw.FillColor = new Color(238, 175, 97);
+            Draw.Rectangle(0, 0, 800, 600);
+            Bus bus = new Bus();
         }
     }
 
