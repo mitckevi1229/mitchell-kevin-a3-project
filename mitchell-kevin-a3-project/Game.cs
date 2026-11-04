@@ -13,12 +13,16 @@ namespace MohawkGame2D
     {
         // Place your variables here:
 
+        Color paint = new Color(140, 240, 110);
+        Color metal = new Color(255, 170, 150);
 
+        Bus bus = new Bus();
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
         public void Setup()
         {
+            Bus.metalB = metal;
             Window.SetSize(800, 600);
             Window.SetTitle("Desert Bus Bootleg");
         }
@@ -28,9 +32,12 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
+            //backround
             Draw.FillColor = new Color(238, 175, 97);
             Draw.Rectangle(0, 0, 800, 600);
-            Bus bus = new Bus();
+            
+            
+            bus.Update();
         }
     }
 

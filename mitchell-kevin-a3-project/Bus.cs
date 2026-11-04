@@ -11,27 +11,13 @@ namespace mitchell_kevin_a3_project
 {
     internal class Bus
     {
-        public Color metal;
+        //bus colors
+        public Color metalB;
         public Color paint;
-        float positionX;
-        public void BusMove()
+        public void Update()
         {
-            float inputX = 0;
-            if (Input.IsKeyboardKeyDown(KeyboardInput.Left) || Input.IsKeyboardKeyDown(KeyboardInput.A))
-            {
-                inputX -= 1;
-            }
-
-            // RIGHT
-            if (Input.IsKeyboardKeyDown(KeyboardInput.Right) || Input.IsKeyboardKeyDown(KeyboardInput.D))
-            {
-                inputX += 1;
-            }
-            positionX += inputX * 100 * Time.DeltaTime;
-        }
-        public void BusShape()
-        {
-            Draw.FillColor = new Color(238, 175, 97);
+            //make bus
+            Draw.FillColor = metalB;
             Draw.Rectangle(0, 500, 400, 400);
         }
     }
